@@ -1,0 +1,260 @@
+/* Scouting America Official Colors
+Primary Colors
+Blue: #003F87
+Gold: #FDC116
+Grey: #515354
+Olive: #243E2C
+Red: #CE1126
+Tan: #D6CEBD
+
+Secondary Colors
+Pale Blue: #9AB3D5
+Dark Blue: #003366
+Light Tan: #E9E9E4
+Dark Tan: #AD9D7B
+Pale Grey: #858787
+Dark Grey: #232528
+*/
+
+/*Global styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Lato, Arial, Helvetica, Verdana, Geneva, sans-serif;
+    font-size: 19px;
+    color: #232528;
+}
+
+/* Navigation menu */
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    padding: 0px 16px;
+    width: 100%;
+    background-color: #232528;
+}
+header li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+}
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: none;
+}
+/* Nav menu color for page you are on */
+.active { 
+    background-color: #858787;
+    padding: 14px 16px;
+    font-weight: bold;
+}
+
+/* Nav menu color when mousing over the links*/
+li a:hover:not(.active){
+    padding: 0px 0px;
+}
+
+/* Hero image - same on all pages*/
+.hero{
+    display: flex;
+    flex-direction: column;
+    background-image: url("P5010025.jpg");
+    min-height: 350px;
+    align-self: baseline;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main header on each page */
+#main {
+    color: #243E2C;
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 35px;
+    /* box-align: left; */
+}
+
+/* Secondary headers */
+.subhead_red {
+    color: #CE1126;
+    font-weight: bold;
+    text-align: left;
+    font-size: 24px;
+    padding-bottom: 24px;
+}
+
+.subhead_green {
+    color: #243E2C;
+    font-weight: bold;
+    text-align: left;
+    font-size: 24px;
+    padding-bottom: 24px;
+    margin: 1em;
+}
+
+/* Informational text that needs to be centered */
+.general-info {
+    text-align: center;
+    padding-top: 19px;
+}
+
+/* Container to left-justify image */
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 19px;
+}
+
+/* Specify image size */
+.img-main{
+    width: 470px;
+    height: 394px;
+    object-fit:contain;
+}
+
+/* Text next to image */
+.img-text{
+    padding-left: 20px;
+}
+
+/* Horizontal dividing line */
+hr.solid{
+    border-top: 1px solid #858787;
+    margin: 20px;
+    align-self: center;
+}
+
+/* Button */
+.infoButton, .applyButton, .sponsorButton{
+    border: none;
+    background-color: #243E2C;
+    padding: 10px 24px 10px;
+    margin-top:20px;
+    width: 65%;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+  
+} 
+ .infoButton:hover{
+    background-color: #858787;
+ }
+ .applyButton:hover{
+    background-color: #858787;
+ }
+ .sponsorButton:hover{
+    background-color: #858787;
+ }
+
+ /* List formatting */
+ul.formList {
+    list-style-type: square;
+    color: #243E2C;
+    margin: 1em;
+    padding: 0;
+    line-height: .5em;
+    font-size: 16px;
+}
+
+ul.formList li {
+    margin: 1em;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* Formatting for columns & rows */
+.column {
+    flex: 1; 
+    max-width: 50%;    
+}
+
+.row {
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+    width:80%;
+    margin:auto;
+}
+
+ /* Formating for the pop up email form */
+.formBox {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #23252870; /*70 on end to adjust transparency*/
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.formBody {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px #23252890;
+    position: relative;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #232528;
+}
+
+.formBody input[type="text"],
+.formBody input[type="email"],
+.formBody textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    border: 1px solid #515354;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #85878720;
+}
+
+/* Submit Button */
+.formBody input[type="submit"] {
+    background-color: #243E2C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formBody input[type="submit"]:hover {
+    background-color: #858787;
+}
+
+.errorMessage {
+    color:#CE1126;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+
+
