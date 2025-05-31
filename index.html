@@ -2,9 +2,14 @@
 <html>
     <head>
         <title>Troop 4054 B</title>
+
         <link rel="stylesheet" type="text/css" href="styles.css"/>
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
-        <script type="text/javascript" src="site_script.js"></script>
+
+        <script type="text/javascript" src="contactform_script.js"></script>
+        <script type="text/javascript" src="photo_gallery.js"></script>
+        <script type="text/javascript" src="mobile_menu.js"></script>
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- https://developers.google.com/fonts/docs/getting_started -->
@@ -16,42 +21,114 @@
         <!-- Navigation menu at top of page -->
         <header>
             <nav>
-                <ul>
+                <!-- Create hamburger menu for mobile -->
+                 <!-- References -->
+                <!-- https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+                <!-- https://piccalil.li/blog/build-a-fully-responsive-progressively-enhanced-burger-menu/ -->
+                <div class="hamburger" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul id="burgerLinks">
                     <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="calendar.html">Calendar</a></li>
                     <li><a href="resources.html">Forms</a></li>
                 </ul>
             </nav>
-        </header>
-
-        <!-- Hero Image -->
-        <div class="hero"> </div>
+        </header> 
+        
+        <section class="hero">
+        <img src="images/heroes/rockpond.jpg" alt="Troop 4054 Hero Image" />
+        </section>
 
         <!-- Main heading -->
         <h1 id="main"> Welcome to Troop 4054!</h1>
 
         <!-- Information about the troop -->
-        <div class="center">
-        <div class="general-info">
-            <p> 
-                Since 1969, Troop 4054 B has been serving the youth of the Town of
-                the Town of Ballston, NY. <br>We are chartered by American
-                Legion Post #1817, and are a member of the Mohawk District
-                in the Twin Rivers Council.             
-            </p>
-        </div>
+        <section class="general-info">
+            <div class="troop-info">
+                <p> 
+                    Since 1969, Troop 4054 B has been serving the youth of the Town of
+                    the Town of Ballston, NY. <br>We are chartered by American
+                    Legion Post #1817, and are a member of the Mohawk District
+                    in the Twin Rivers Council.             
+                 </p>
+            </div>
        
-              <div class="general-info">
-            <p>   
-                Troop meetings are held Mondays from 645PM to 800PM at:<br>
-                Our Lady of Grace Church, 73 Midline Rd., Ballston Lake, NY 12019<br>
-            </p>
+            <div class="troop-info">
+                <p>   
+                    Troop meetings are held Mondays from 645PM to 800PM at:<br>
+                    Our Lady of Grace Church, 73 Midline Rd., Ballston Lake, NY 12019<br>
+                    <p><br></p>
+                </p>
+            </div>
             <hr class="solid">
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="gallery-wrap">
+        <div class="gallery-container">
+            <button onclick="scrollPhotos(-1)">◀</button>
+
+            <div class="slideshow-container" id="slideshowContainer">
+                 <div class="slideshow-items">
+                    <div class="slideshow-img">
+                        <img src="images/gallery/1Philmont2023.JPG" alt="Photo of the troop
+                        with Philmont sign." />
+                       <div class="caption"></div>
+                     </div>
+                    <div class="slideshow-img">
+                        <img src="images/gallery/sledrace.JPG" alt="Scouts in a canoe mounted
+                        on skis." />
+                        <div class="caption"></div>
+                    </div>
+                    <div class="slideshow-img">
+                        <img src="images/gallery/1Read2023.JPG" alt="Scouts tending a campfire." />
+                        <div class="caption"></div>
+                    </div>
+                    <div class="slideshow-img">
+                        <img src="images/gallery/eagle2024.jpg" alt="A scout receiving his Eagle Award." />
+                        <div class="caption"></div>
+                    </div>
+                    <div class="slideshow-img">
+                        <img src="images/gallery/1Read2024.JPG" alt="Scouts sitting at a picnic
+                        table at the waterfront." />
+                        <div class="caption"></div>
+                    </div>
+                    <div class="slideshow-img">
+                        <img src="images/gallery/2Read2023.jpg" alt="A scout with his golden pidgeon award." />
+                        <div class="caption"></div>
+                    </div>
+                    <div class="slideshow-img">
+                        <img src="images/gallery/albanyair.JPG" alt="A scout climbing a rock wall." />
+                        <div class="caption"></div>
+                    </div>
+                    <div class="slideshow-img">
+                        <img src="images/gallery/connoreagle.JPG" alt="A scout using a square." />
+                        <div class="caption"></div>
+                    </div>
+                    <div class="slideshow-img">
+                        <img src="images/gallery/frenchhenry.JPG" alt="Scouts sitting on a bridge in the woods." />
+                        <div class="caption"></div>
+                    </div>
+                    <div class="slideshow-img">
+                        <img src="images/gallery/sleepingbeautymtn.jpg" alt="Scouts on top of Sleeping Beauty Mountain." />
+                        <div class="caption"></div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="scrollPhotos(1)">▶</button>
         </div>
-        
+        </section>
+
+        <hr class="solid">
+
+        <!-- Interested In Joining Section -->
         <div class="img-container">
             <div class="image">
-                <img class="img-main" src="images/Boot.jpg" alt="Close up picture of a hiking
+                <img class="img-main" src="images/boot.jpg" alt="Close up picture of a hiking
                 boot walking on a dirt trail. The text reads Escape
                 the great indoors.">
             </div>
@@ -67,17 +144,16 @@
                     <button type="button" class="infoButton" id="openPopup">Get More Information</button>
                 </p>
                 <p>
-                    <a href="https://my.scouting.org/online-registration/56ab6000-4875-480e-be1e-2abfa06590a7/applicant-type">
-                        <button class="applyButton">Apply Online Now</button>
+                    <a href="https://my.scouting.org/online-registration/56ab6000-4875-480e-be1e-2abfa06590a7/applicant-type" target="_blank" rel="noopener">
+                    <button class="applyButton">Apply Online Now</button>
                     </a>
                 </p>
             </div>
         </div>
-      
+
         <hr class="solid">
-        </div>
+
         <!-- Popup Email Form -->
-        <!-- NOTE: ADD FUNCTIONALITY TO SUBMIT BUTTON -->
         <div id="emailForm" class="formBox"> 
             <div class="formBody"> 
                 <span class="closeButton" id="closePopup">&times;</span>
@@ -99,7 +175,8 @@
                 </form>
             </div>
         </div>
-        
+
+        <!-- Sponsor A Wreath Section -->
         <div class="img-container">
             <div class="image"> 
                 <img class="img-main" src="images/WAA2025.jpg" alt="A veteran's gravestone with 
@@ -115,13 +192,12 @@
                     veterans buried at Saratoga National Cemetery.
                 </p>
                 <p>
-                    <a href="https://wreathsacrossamerica.org/pages/167300/Overview">
-                        <button class="sponsorButton">Sponsor A Wreath</button>
+                    <a href="https://wreathsacrossamerica.org/pages/167300/Overview" target="_blank" rel="noopener">
+                    <button class="sponsorButton">Sponsor A Wreath</button>
                     </a>
                 </p>
             </div>
         </div>
-        <hr class="solid">
 
     </body>
 </html>
