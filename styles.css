@@ -89,7 +89,7 @@ li a:hover:not(.active){
     nav li {
         text-align: center;
         padding: 12px 0;
-        border-top: 1px solid #444;
+        border-top: 1px solid #E9E9E4;
     }
 
     nav a.active {
