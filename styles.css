@@ -1,19 +1,11 @@
 /* Scouting America Official Colors
-Primary Colors
-Blue: #003F87
-Gold: #FDC116
-Grey: #515354
-Olive: #243E2C
-Red: #CE1126
-Tan: #D6CEBD
-
-Secondary Colors
-Pale Blue: #9AB3D5
-Dark Blue: #003366
-Light Tan: #E9E9E4
-Dark Tan: #AD9D7B
-Pale Grey: #858787
-Dark Grey: #232528
+Primary Colors          Secondary Colors
+Blue: #003F87           Pale Blue: #9AB3D5
+Gold: #FDC116           Dark Blue: #003366
+Grey: #515354           Light Tan: #E9E9E4
+Olive: #243E2C          Dark Tan: #AD9D7B
+Red: #CE1126            Pale Grey: #858787
+Tan: #D6CEBD            Dark Grey: #232528 
 */
 
 /*Global styling */
@@ -46,35 +38,87 @@ header a {
     color: #ffffff;
     transition: none;
 }
-/* Nav menu color for page you are on */
+
 .active { 
+    /* Nav menu color for page you are on */
     background-color: #858787;
     padding: 14px 16px;
     font-weight: bold;
 }
 
-/* Nav menu color when mousing over the links*/
 li a:hover:not(.active){
+    /* Make font bold when mousing over the links*/
     padding: 0px 0px;
+    font-weight: bold;
 }
 
-/* Hero image - same on all pages*/
-.hero{
-    display: flex;
-    flex-direction: column;
-    background-image: url("images/P5010025.JPG");
-    min-height: 350px;
-    align-self: baseline;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    align-items: center;
-    justify-content: center;
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
+  cursor: pointer;
 }
 
-/* Main header on each page */
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 1px;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #232528;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav li {
+        text-align: center;
+        padding: 12px 0;
+        border-top: 1px solid #444;
+    }
+
+    nav a.active {
+        padding: 12px 0;
+    }
+}
+
+/* Hero Image */
+.hero {
+  width: 100%;
+  max-height: 60vh; /* Limit height relative to viewport */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;       /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures no cropping */
+  max-height: 60vh;    /* Prevent image from getting too tall */
+  display: block;
+}
+
+/* Headings */
 #main {
+    /* Main header on each page */
     color: #243E2C;
     font-weight: bold;
     text-align: center;
@@ -83,8 +127,8 @@ li a:hover:not(.active){
     /* box-align: left; */
 }
 
-/* Secondary headers */
 .subhead_red {
+    /* Secondary header */
     color: #CE1126;
     font-weight: bold;
     text-align: left;
@@ -93,6 +137,7 @@ li a:hover:not(.active){
 }
 
 .subhead_green {
+    /* Secondary header */
     color: #243E2C;
     font-weight: bold;
     text-align: left;
@@ -102,9 +147,73 @@ li a:hover:not(.active){
 }
 
 /* Informational text that needs to be centered */
-.general-info {
+.troop-info {
     text-align: center;
     padding-top: 19px;
+}
+
+/* Horizontal dividing line */
+hr.solid{
+    border-top: 1px solid #858787;
+    align-self: center;
+}
+
+/* Photo Gallery */
+.gallery-wrap {
+  background-color: #E9E9E4;
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px; 
+  background-color:inherit;
+}
+
+.slideshow-container {
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden; /* Hide scrollbar */
+  white-space: nowrap;
+  border: 2px solid #AD9D7B;
+}
+
+.slideshow-items {
+  display: inline-flex;
+}
+
+.slideshow-img {
+  flex: 0 0 auto;
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.slideshow-img img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  background-color: #000000;
+  height: 20px; /* Adjust height as needed */
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #243E2C;
+  color: #ffffff;
 }
 
 /* Container to left-justify image */
@@ -112,6 +221,9 @@ li a:hover:not(.active){
     display: flex;
     align-items: center;
     justify-content: start;
+    /* padding-top: 40px;
+    padding-bottom: 40px; */
+    padding: 2% 10%;
 }
 
 /* Specify image size */
@@ -127,68 +239,64 @@ li a:hover:not(.active){
     padding-right: 50px;
 }
 
-/* Horizontal dividing line */
-hr.solid{
-    border-top: 1px solid #858787;
-    margin: 20px;
-    align-self: center;
-}
-
-/* Button */
-.infoButton, .applyButton, .sponsorButton{
+/* Buttons */
+.infoButton, 
+.applyButton, 
+.sponsorButton{
     border: none;
     background-color: #243E2C;
-    padding: 10px 24px 10px;
-    margin-top:20px;
-    width: 30%;
+    padding: 10px 24px;
+    margin-top: 20px;
+    min-width: 50%;
+    max-width: 60%;
     text-align: center;
     display: inline-block;
-    font-size: 16px;
+    font-size: 17px;
     color: #ffffff;
     cursor: pointer;
-  
+    transition: background-color 0.3s ease;
 } 
- .infoButton:hover{
-    background-color: #858787;
- }
- .applyButton:hover{
-    background-color: #858787;
- }
+ .infoButton:hover, 
+ .applyButton:hover, 
  .sponsorButton:hover{
     background-color: #858787;
  }
 
- /* List formatting */
-ul.formList {
-    list-style-type: square;
-    color: #243E2C;
-    margin: 1em;
-    padding: 0;
-    line-height: .5em;
-    font-size: 16px;
+ /* Adjust for mobile screens */
+ @media screen and (max-width: 600px) {
+  .infoButton,
+  .applyButton,
+  .sponsorButton {
+    font-size: 14px;
+    padding: 8px 16px;
+    min-width: 80%; /* Wider on smaller screens */
+    display: block; /* Stack buttons vertically */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/* Stack images when on small screen */
+@media screen and (max-width: 600px) {
+  .img-container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .img-main {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+  }
 }
 
-ul.formList li {
-    margin: 1em;
-    padding: 0;
-    font-size: 16px;
-}
-
-/* Formatting for columns & rows */
-.column {
-    flex: 1; 
-    max-width: 50%;    
-}
-
-.row {
-    display:flex;
-    justify-content: center;
-    gap: 20px;
-    width:80%;
-    margin:auto;
-}
-
- /* Formating for the pop up email form */
+/* Formating for the pop up email form */
 .formBox {
     display: none; 
     position: fixed;
@@ -234,8 +342,8 @@ ul.formList li {
     background-color: #85878720;
 }
 
-/* Submit Button */
 .formBody input[type="submit"] {
+    /* Submit Button */
     background-color: #243E2C;
     color: white;
     border: none;
@@ -254,7 +362,3 @@ ul.formList li {
     font-size: 16px;
     margin-bottom: 10px;
 }
-
-
-
-
