@@ -114,6 +114,7 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #000000;
+    padding-top: 50px;/*added*/
 }
 
 .hero img {
@@ -763,5 +764,9 @@ ul.resourcesList a:hover {
 
     .subhead_red { /*added*/
     text-align: center; /*center when on mobile only*/
+    }
+
+    .hero {/*added*/
+    padding-top: 60px;
     }
 }
