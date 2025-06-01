@@ -619,21 +619,31 @@ ul.resourcesList a:hover {
         align-items: center;
         padding: 20px 5%;
     }
-    .calendar-image {
+/*     .calendar-image {
         width: 100%;
         max-width: 400px;
         height: auto;
-    }
+    } */
     .calendar-image img {
         height: auto;
         width: 100%;
         max-width: 100%;
     }
-    .calendar-lists {
+/*     .calendar-lists {
         width: 100%;
         margin-top: 20px;
+    } */
+
+    .calendar-image,
+    .calendar-lists {/*added*/
+    width: 100%;
+    max-width: 100%;
     }
 
+    .calendar-lists {/*added*/
+    margin-top: 20px;
+    }
+    
     /* Responsive Navigation */
     .hamburger {
         display: flex;
