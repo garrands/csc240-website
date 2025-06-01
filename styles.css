@@ -612,7 +612,7 @@ ul.resourcesList a:hover {
 
 /* RESPONSIVE STYLING */
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     /* Calendar Section */
     .calendar-section {
         flex-direction: column;
