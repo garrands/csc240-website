@@ -333,6 +333,12 @@ button {
     background-color: #858787;
 }
 
+.applyButton:visited, /*added*/
+.sponsorButton:visited,
+.infoButton:visited {
+    color: #ffffff;  
+}
+
 /* .img-container {
     display: flex;
     align-items: center;
