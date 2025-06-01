@@ -1,79 +1,147 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Troop 4054 B</title>
 
-        <title>Troop 4054B</title>
         <link rel="stylesheet" type="text/css" href="styles.css"/>
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+        <script type="text/javascript" src="contactform_script.js"></script>
+        <script type="text/javascript" src="mobile_menu.js"></script>
+        <script type="text/javascript" src="hamburger.js"></script>
+        <script type="text/javascript" src="photo_gallery.js"></script>   
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- https://developers.google.com/fonts/docs/getting_started -->
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>        
         
     </head>
 
     <body>
         <!-- Navigation menu at top of page -->
         <header>
+            <a href="https://www.scouting.org/" target="_blank" rel="noopener" class="nav-logo">
+                <img src="images/Fleur-de-lis-2024-logo-reversed-BC.png" alt="Fleur-de-lis logo of Scouting America." />
+            </a>
+
             <nav>
-                <ul>
+                <!-- Create hamburger menu for mobile -->
+                <!-- References
+                https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+                https://piccalil.li/blog/build-a-fully-responsive-progressively-enhanced-burger-menu/ -->
+                <div class="hamburger" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul id="burgerLinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="calendar.html">Calendar</a></li>
-                    <li><a class="active" href="resrouces.html">Forms</a></li>
+                    <li><a class="active" href="resources.html">Forms</a></li>
                 </ul>
             </nav>
-        </header>
+        </header> 
 
-        <!-- Hero Image -->
-        <div class="hero"> </div>
+        <section class="hero">
+        <img src="images/heroes/mapcompass.jpg" alt="Scouts overlooking a valley while
+        on the trail off of Baldy Mountain heading to French Henry." />
+        </section>
 
         <!-- Main heading -->
-        <h1 id="main"> Forms & Resources </h1>
-
-        <!-- Sub-headings with links below -->
-        <div class="camp_info">
-            <h2 class="subhead_green"> Summer Camp 2025 @ Wakpominee</h2>
-
-            <ul class="formList">
-                <li><a href="https://drive.google.com/file/d/1IDdU_IOY4HNR8H_zi3UAP-b3Wq8idvmz/view">
-                    Health Form</a>  - All parts must be filled out & copy of insurance card attached </li>
-                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScLUbrkHLo6ABVom8U3fl30Wbc2RxgMp8--eeKwUhRy1DcLxQ/viewform">
-                    Food Allergy & Dietary Restriction Form</a>  - All parts must be filled out & copy of insurance card attached </li>
-                <li><a href="https://campwakpominee.org/wp-content/uploads/2025/04/Wakpominee-2025-v1-Draft-Merit-Badge-Schedule.pdf">
-                    Merit Badge Schedule (Draft)</a></li>
-                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScKdcu7zB20M4tGDKhcGDG85XTkMzXGSHqCYwvjkcqYMwF8Yw/viewform">
-                    Campership Application</a> - Due 01 Apr 2025</li>
+        <h1 id="main"> Forms & Resources</h1>
+      
+        <section class="resources-wrap">
+            <!-- Special event links -->
+            <hr class="solid2">
+            <h2 class="subhead_green2">2025 Summer Camp @ <a href="https://campwakpominee.org/" target="_blank" rel="noopener" class="match-heading">Camp Wakpominee</a></h2>
+            <ul class="resourcesList">
+                <li><a href="https://drive.google.com/file/d/1IDdU_IOY4HNR8H_zi3UAP-b3Wq8idvmz/view?usp=sharing" target="_blank" rel="noopener">Health Form - All parts must be filled out & copy of insurance card attached</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScLUbrkHLo6ABVom8U3fl30Wbc2RxgMp8--eeKwUhRy1DcLxQ/viewform" target="_blank" rel="noopener">Food Allergy and Dietary Restrictions Form</a> (Submit no later than 13 Jul 2025)</li>
+                <li><a href="https://campwakpominee.org/wp-content/uploads/2025/04/Wakpominee-2025-v1-Draft-Merit-Badge-Schedule.pdf" target="_blank" rel="noopener">Merit Badge Schedule (Draft)</a></li>
+                <li><a href="https://campwakpominee.org/wp-content/uploads/2025/04/Merit-Badge-Prerequisite.pdf" target="_blank" rel="noopener">Merit Badge Prerequisites</a></li>
+                <li><a href="https://campwakpominee.org/wp-content/uploads/2025/05/804AO-1-Camper-Release-Form.pdf" target="_blank" rel="noopener">Camper Release Form</a></li>
+                <li><a href="https://forms.gle/ZZCkSv8Jm4m2WHFe6" target="_blank" rel="noopener">Campership Application</a> (Due 01 Apr 2025)</li>
+                <li><a href="https://campwakpominee.org/wp-content/uploads/2025/05/LeaderGuide24_300dpi250424.pdf" target="_blank" rel="noopener">Planning Guide for Leaders</a></li>
+                <li><a href="https://forms.gle/Z5seGq1uc5xJUAds9" target="_blank" rel="noopener">Adult Background Check Form</a> (Due by 26 June 2025)</li>                
             </ul>
+            <hr class="solid2">
+        </section>
+
+        <div class="section-group">
+            <!-- Links for parents -->
+            <div class="section">
+                <h2 class="subhead_green2">For Parents</h2>
+                <ul class="resourcesList">
+                    <li><a href="https://drive.google.com/file/d/1akJ5pb_dySD3wQSP-DaHvqIeavGwcF5g/view?usp=sharing" target="_blank" rel="noopener">Activity Consent Form</a></li>
+                    <li><a href="https://my.scouting.org/online-registration/56ab6000-4875-480e-be1e-2abfa06590a7/applicant-type" target="_blank" rel="noopener">Adult Application</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Bhkfp2dfYm06FkbNTy7M0HmWrZzaVSyy/view?usp=sharing" target="_blank" rel="noopener">Health Form</a></li>
+                    <li><a href="https://www.scouting.org/health-and-safety/ahmr/medical-formfaqs/" target="_blank" rel="noopener">Health Form FAQ</a></li>
+                    <li><a href="https://drive.google.com/file/d/1O5keuR3bHHe2BNMEKenG94hMT4tEI_HV/view?usp=sharing" target="_blank" rel="noopener">Liability Waiver (Kayaderosseras Fish & Game Club)</a></li>
+                    <li><a href="https://drive.google.com/file/d/1qW_aJhg4P9_qOc56taAQB0BQwISiw-is/view?usp=sharing" target="_blank" rel="noopener">Merit Badge Counselor Application</a></li>
+                    <li><a href="https://my.scouting.org/online-registration/56ab6000-4875-480e-be1e-2abfa06590a7/applicant-type" target="_blank" rel="noopener">Youth Application</a></li>
+                    <li><a href="https://www.scouting.org/wp-content/uploads/2020/05/How-to-Guide-for-Taking-Youth-Protection-Training-as-of-5-20-2020.pdf" target="_blank" rel="noopener">Youth Protection Training Instructions</a></li>
+                </ul>
+            </div>
+
+            <!-- Links for adult leaders --> 
+            <div class="section">   
+            <h2 class="subhead_green2">For Adult Leaders</h2>
+                <ul class="resourcesList">
+                    <li><a href="https://www.scouting.org/programs/scouts-bsa/advancement-and-awards/resources/" target="_blank" rel="noopener">Advancement Resources</a></li>
+                    <li><a href="https://www.scouting.org/awards/awards-central/" target="_blank" rel="noopener">Awards Index</a></li>
+                    <li><a href="https://troopleader.scouting.org/ceremonies/index/" target="_blank" rel="noopener">Ceremonies Index</a></li>
+                    <li><a href="https://www.scouting.org/health-and-safety/gss/" target="_blank" rel="noopener">Guide To Safe Scouting</a></li>
+                    <li><a href="https://troopleader.scouting.org/troop-planning/troop-self-assessments/" target="_blank" rel="noopener">Troop Self-Assessment</a></li>
+                    <li><a href="https://www.scouting.org/resources/forms/" target="_blank" rel="noopener">National Scouting Forms Index</a></li>
+                </ul>
+            </div>
+            
         </div>
+        <hr class="solid2">
+        <div class="section-group">
+            <!-- Links for patrol leaders --> 
+            <div class="section">
+                <h2 class="subhead_green2">For Patrol Leaders</h2>
+                <ul class="resourcesList">
+                    <li><a href="https://troopleader.scouting.org/activities/categorized-index/" target="_blank" rel="noopener">Activities Index</a></li>
+                    <li><a href="https://drive.google.com/file/d/1cgWZ2njb_E3xTlco7kK8ZwnhZqd2Vvz1/view" target="_blank" rel="noopener">Age Guidelines for Activities</a></li>
+                    <li><a href="https://drive.google.com/file/d/1RNJ9YH86m2waXwYiEZX6__8BHi6q78P_/view" target="_blank" rel="noopener">Annual Planner</a></li>
+                    <li><a href="https://drive.google.com/file/d/1c2_MMW0CQTo8qWWfJuMBTBrbMVV-J279/view" target="_blank" rel="noopener">Main Event Planner</a></li>
+                    <li><a href="https://troopleader.scouting.org/program-features/project-planning/" target="_blank" rel="noopener">Project Planning (How to)</a></li>
+                    <li><a href="https://drive.google.com/file/d/18iMjNvBcNRDAAV6mftXOYhjMO3ipt3mA/view" target="_blank" rel="noopener">Project Planning Worksheet</a></li>
+                    <li><a href="https://drive.google.com/file/d/1jFhFh-sd3DY4vb5bkMMUbvUvsL3Mf17e/view" target="_blank" rel="noopener">Troop Meeting Planner</a></li>
+                </ul>
+            </div>
 
-        <div class="for_adults">
-            <div class="row">
-                <div class="column">
-                    <h2 class="subhead_green">For Parents</h2>
-                    <ul class="formList">
-                        <li><a href="https://drive.google.com/file/d/1akJ5pb_dySD3wQSP-DaHvqIeavGwcF5g/view?usp=sharing">
-                            Activity Consent Form</a></li>
-                        <li><a href="https://drive.google.com/file/d/1Bhkfp2dfYm06FkbNTy7M0HmWrZzaVSyy/view?usp=sharing">
-                            Health Form</a></li>
-                        <li><a href="https://drive.google.com/file/d/1O5keuR3bHHe2BNMEKenG94hMT4tEI_HV/view?usp=sharing">
-                            Liability Waiver (Kayaderosseras Fish & Game Club)</a></li>
-                        <li><a href="https://drive.google.com/file/d/1qW_aJhg4P9_qOc56taAQB0BQwISiw-is/view?usp=sharing">
-                            Merit Badge Counselor Information</a></li>
-                    </ul>
-                </div>
-
-                <div class="column">
-                    <h2 class="subhead_green">For Adult Leaders</h2>
-                    <ul class="formList">
-                        <li><a href="https://www.scouting.org/programs/scouts-bsa/advancement-and-awards/resources">
-                            Advancement Resources</a></li>
-                        <li><a href="https://www.scouting.org/awards/awards-central">Awards Index</a></li>
-                        <li><a href="https://troopresources.scouting.org/ceremonies-index/">Ceremonies Index</a></li>
-                        <li><a href="https://www.scouting.org/health-and-safety/gss/">Guide To Safe Scouting</a></li>
-                        <li><a href="https://www.scouting.org/resources/forms">National Scouting Forms Index</a></li>
-                    </ul>
-                </div>
+            <!-- Links for all scouts --> 
+            <div class="section">
+                <h2 class="subhead_green2">For All Scouts</h2>
+                <ul class="resourcesList">
+                    <li><a href="https://www.animatedknots.com/" target="_blank" rel="noopener">Animated Knots</a></li>
+                    <li><a href="https://troopleader.scouting.org/rank-advancement-skills/" target="_blank" rel="noopener">Campcraft Skill Videos</a></li>
+                    <li><a href="https://www.scouting.org/skills/merit-badges/all/" target="_blank" rel="noopener">Merit Badge Requirements</a></li>
+                    <li><a href="http://usscouts.org/mb/worksheets/list.asp" target="_blank" rel="noopener">Merit Badge Workbooks</a></li>
+                </ul>
             </div>
         </div>
-    </body>
-</html>    
+
+        <!-- Footer with logos & links -->
+        <footer>            
+            <div class="footer-logos">
+                 <a href="https://www.facebook.com/profile.php?id=61561207439466" target="_blank" rel="noopener">
+                    <img src="images/facebook.png" alt="Facebook logo. White 'f' on blue circle.">
+                </a>
+                <a href="https://www.scouting.org/" target="_blank" rel="noopener">
+                    <img src="images/Fleur-de-lis-2024-logo-4c-BC.png" alt="Red and blue fleur-de-lis.">
+                </a>
+                <a href="https://trcscouting.org/" target="_blank" rel="noopener">
+                    <img src="images/twinrivers.jpg" alt="Logo of the Twin Rivers Council.">
+                </a>
+            </div>
+            <p class="footer-text"><a href="https://www.troop4054.org/cc-license">&copy; 2020-2025 Troop 4054. All rights reserved.</a></p>
+        </footer>
+
+    </body>    
+</html>
