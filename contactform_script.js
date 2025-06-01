@@ -9,8 +9,9 @@ window.onload = function () {
 
     // Open & close contact form
     if (openButton && closeButton && popupForm) {
-        openButton.addEventListener("click", function () {
-            popupForm.style.display = "flex";
+        openButton.addEventListener("click", function (event) {
+        event.preventDefault(); 
+        popupForm.style.display = "flex";
         });
 
         closeButton.addEventListener("click", function () {
