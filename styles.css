@@ -297,6 +297,11 @@ nav li a:hover:not(.active) {
     cursor: pointer;
 }
 
+.img-text p {/*added*/
+    font-size: 18px; 
+    line-height: 1.2; 
+}
+
 /* COMPONENTS STYLING */
 
 button {
