@@ -1,4 +1,3 @@
-
 window.onload = function () {
     const applyButton = document.querySelector(".applyButton");
     const sponsorButton = document.querySelector(".sponsorButton");
@@ -57,4 +56,3 @@ window.onload = function () {
         });
     }
 };
-
