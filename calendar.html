@@ -1,82 +1,118 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Troop 4054B</title>
+        <title>Troop 4054 B</title>
+
         <link rel="stylesheet" type="text/css" href="styles.css"/>
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+        <script type="text/javascript" src="contactform_script.js"></script>
+        <script type="text/javascript" src="photo_gallery.js"></script>
+        <script type="text/javascript" src="mobile_menu.js"></script>
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- https://developers.google.com/fonts/docs/getting_started -->
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> 
-
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>        
+        
     </head>
 
     <body>
         <!-- Navigation menu at top of page -->
         <header>
+            
+            <a href="https://www.scouting.org/" target="_blank" rel="noopener" class="nav-logo">
+                <img src="images/Fleur-de-lis-2024-logo-reversed-BC.png" alt="Fleur-de-lis logo of Scouting America." />
+            </a>
+
             <nav>
-                <ul>
+                <!-- Create hamburger menu for mobile -->
+                <!-- References
+                https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+                https://piccalil.li/blog/build-a-fully-responsive-progressively-enhanced-burger-menu/ -->
+                <div class="hamburger" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul id="burgerLinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a class="active" href="calendar.html">Calendar</a></li>
                     <li><a href="resources.html">Forms</a></li>
                 </ul>
             </nav>
-        </header>
-
-        <!-- Hero Image -->
-        <div class="hero"> </div>
+        </header> 
+        
+        <section class="hero">
+        <img src="images/heroes/baldymtn.jpg" alt="Scouts overlooking a valley while
+        on the trail off of Baldy Mountain heading to French Henry." />
+        </section>
 
         <!-- Main heading -->
         <h1 id="main"> Calendar</h1>
 
-        <!-- Link & informational text -->
-        <div class="general-info">
-            <p> 
-                See <a href="https://advancements.scouting.org/calendar">Scoutbook Calendar</a> for event 
-                details and updates            
-            </p>
-        </div>
+        <!-- Calendar information -->
+        <section class="general-info">
+            <div class="troop-info">
+                <p> 
+                    See <a href="https://advancements.scouting.org/calendar" target="_blank" rel="noopener">Scoutbook Calendar</a> for event 
+                details and updates                
+                 </p>
+                 <p><br></p>
+            </div>
+        </section>
 
-        <!-- Calendar & Image side by side -->
-        <div class="row">            
-            <div class="column">
+        <div class="calendar-section">
+            <!-- Calendar image -->
+            <div class="calendar-image">
+                <img src="images/2Read2024.JPG" alt="A scout climbing a rock tower" />
+            </div>
+  
+            <!-- Calendar dates - top list -->
+            <div class="calendar-lists">
+                <div class="month-list">
+                    <h2 class="subhead_green1">May 2025</h2>
+                    <ul class="calendarList">
+                        <li>May 02-02: <a href="https://advancements.scouting.org/calendar/event/6348008" target="_blank" rel="noopener">Conservation Camporee @ Wakpominee</a></li>
+                        <li>May 05: (645-800PM) Troop Meeting</li>
+                        <li>May 10: <a href="https://advancements.scouting.org/calendar/event/6309169" target="_blank" rel="noopener">Rifle Shoot @ KFGC</a></li>
+                        <li>May 12: (645-800PM) Troop Meeting</li>
+                        <li>May 19: (645-800PM) Troop Meeting</li>
+                        <li>May 24-25: <a href="https://advancements.scouting.org/calendar/event/6348030" target="_blank" rel="noopener">Camping @ Ft. Ticonderoga</a></li>
+                        <li>May 26: <b style="color:#CE1126">No Troop Meeting</b></li>
+                    </ul>
+                </div>
                 
-                <img src="images/IMG_2770.JPG" alt="Eight boy scouts looking out
-                over a valley, just below the summit of Baldy Mountain
-                at Philmont Scout Ranch in New Mexico" style="width: 400px; 
-                height:600px; object-fit:cover">
-                
-            </div> 
-            
-            <div class="column">
-               
-                <h2 class="subhead_green">April 2025</h2>
-                
-                <ul class="formList">
-                    <li>Apr 01: (400-900PM) Pizza Works Fundraiser</li>
-                    <li>Apr 07: (645-800PM) Troop Meeting</li>
-                    <li>Apr 14: <b><span style="color:#CE1126">No Troop
-                        Meeting</span></b></li>
-                    <li>Apr 20: Final day to register for Ft. Ticonderoga</li>
-                    <li>Apr 21: (645-800PM) Troop Meeting</li>
-                    <li>Apr 27: (1000-100PM) Wilkinson Trail Hike</li>
-                    <li>Apr 28: (645-800PM) Troop Meeting</li>
-                </ul> 
-                <br>
-                <h2 class="subhead_green">May 2025</h2>
-                
-                <ul class="formList">
-                    <li>May 02-02: Conservation Camporee @ Wakpominee</li>
-                    <li>May 05: (645-800PM) Troop Meeting</li>
-                    <li>May 10: Rifle Shoot @ KFGC</li>
-                    <li>May 12: (645-800PM) Troop Meeting</li>
-                    <li>May 19: (645-800PM) Troop Meeting</li>
-                    <li>May 24-25: Camping @ Ft. Ticonderoga</li>
-                    <li>May 26: <b><span style="color:#CE1126">No Troop
-                        Meeting</span></b></li>
-                </ul> 
-               
+                <!-- Calendar dates - bottom list -->
+                <div class="month-list">
+                    <h2 class="subhead_green1">June 2025</h2>
+                    <ul class="calendarList">
+                        <li>June 02: (645-800PM) Troop Meeting</li>
+                        <li>June 09: (645-800PM) Troop Meeting</li>
+                        <li>June 14 & 15: <a href="https://advancements.scouting.org/calendar/event/6079129" target="_blank" rel="noopener">Muster @ Ft. Misery</a></li>
+                        <li>June: (645-800PM) Troop Meeting & Fitness Merit Badge 12 Week Results</li>
+                        <li>June: (645-800PM) Court of Honor</li>
+                    </ul>
+                </div>
             </div>
         </div>
+
+        <!-- Footer with logos & links -->
+        <footer>            
+            <div class="footer-logos">                
+                 <a href="https://www.facebook.com/profile.php?id=61561207439466" target="_blank" rel="noopener">
+                    <img src="images/facebook.png" alt="Facebook logo. White 'f' on blue circle.">
+                </a>
+                <a href="https://www.scouting.org/" target="_blank" rel="noopener">
+                    <img src="images/Fleur-de-lis-2024-logo-4c-BC.png" alt="Red and blue fleur-de-lis.">
+                </a>
+                <a href="https://trcscouting.org/" target="_blank" rel="noopener">
+                    <img src="images/twinrivers.jpg" alt="Logo of the Twin Rivers Council.">
+                </a>
+            </div>
+            <p class="footer-text"><a href="https://www.troop4054.org/cc-license">&copy; 2020-2025 Troop 4054. All rights reserved.</a></p>
+        </footer>
+
     </body>
 </html>
