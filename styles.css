@@ -348,11 +348,11 @@ button {
 
 .img-container { /*added*/
     display: flex;
-    flex-direction: column; /* stack by default */
-    align-items: center;
-    gap: 20px;
-    padding: 20px 5%;
-    text-align: center;
+    flex-direction: row;   /* ← side-by-side for larger screens */
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    gap: 40px;
 } 
 
 /* .img-main {
@@ -675,11 +675,9 @@ ul.resourcesList a:hover {
     } */
 
     .img-container {/*added*/
-        flex-direction: row; /* row only on wider screens */
-        align-items: flex-start;
-        justify-content: center;
-        text-align: left;
-        gap: 40px;       
+        flex-direction: column; /* ← stack on small screens */
+    align-items: center;
+    text-align: center;    
     }
     .img-main {
         width: 100%;
