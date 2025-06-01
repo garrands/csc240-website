@@ -1,9 +1,11 @@
 // Toggle to the hamburger menu
-document.addEventListener('DOMContentLoaded', function() {
-  const mobileBuger = document.getElementById('burgerMenu');
-  const burgerLinks = document.getElementById('burgerLinks');
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.getElementById('burgerMenu');
+    const links = document.getElementById('burgerLinks');
 
-  mobileBuger.addEventListener('click', function() {
-    burgerLinks.classList.toggle('open');
-  });
+    if (burger && links) {
+        burger.addEventListener('click', () => {
+            links.classList.toggle('open');
+        });
+    }
 });
