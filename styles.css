@@ -373,7 +373,11 @@ button {
     width: 100%;
     padding: 0;
 }
-
+.img-container .image,
+.img-container .img-text {/*added*/
+    flex: 1;
+    max-width: 50%;
+}
 .closeButton {
     position: absolute;
     top: 10px;
@@ -686,6 +690,11 @@ ul.resourcesList a:hover {
         height: auto;
     }
 
+    .img-container .image,
+    .img-container .img-text {/*added*/
+    max-width: 100%;
+    }
+    
     /* Rows and columns */
     .row {
         flex-direction: column;
