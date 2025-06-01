@@ -348,11 +348,12 @@ button {
 
 .img-container { /*added*/
     display: flex;
-    flex-direction: row;   /* ← side-by-side for larger screens */
+    flex-direction: row;     
     align-items: flex-start;
     justify-content: center;
     text-align: left;
     gap: 40px;
+    padding: 20px 5%;
 } 
 
 /* .img-main {
@@ -675,9 +676,9 @@ ul.resourcesList a:hover {
     } */
 
     .img-container {/*added*/
-        flex-direction: column; /* ← stack on small screens */
-    align-items: center;
-    text-align: center;    
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;    
     }
     .img-main {
         width: 100%;
