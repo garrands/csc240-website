@@ -312,19 +312,18 @@ button {
 .infoButton, 
 .applyButton, 
 .sponsorButton {
-    border: none;
-    background-color: #243E2C;
-    padding: 10px 24px;
-    margin-top: 20px;
-    min-width: 50%;
-    max-width: 60%;
+    display: block;
+    width: 250px;          
+    max-width: 90%;        
+    margin: 10px auto;     
+    padding: 12px 0;
+    font-size: 16px;
     text-align: center;
-    display: inline-block;
-    font-size: 17px;
+    background-color: #243E2C;
     color: #ffffff;
+    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border: none;
 } 
 
 .infoButton:hover, 
@@ -645,9 +644,6 @@ ul.resourcesList a:hover {
     .infoButton,
     .applyButton,
     .sponsorButton {
-        font-size: 14px;
-        padding: 8px 16px;
-        min-width: 80%;
         display: block;
         margin-left: auto;
         margin-right: auto;
