@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+    <!-- CSC-240 Web Programming, S. Garrand -->
+     
     <head>
         <title>Troop 4054 B</title>
 
@@ -9,7 +11,10 @@
         <script type="text/javascript" src="contactform_script.js"></script>
         <script type="text/javascript" src="mobile_menu.js"></script>
         <script type="text/javascript" src="hamburger.js"></script>
-        <script type="text/javascript" src="photo_gallery.js"></script>        
+        <script type="text/javascript" src="photo_gallery.js"></script> 
+        
+        <!-- The script works, but I decided to create this effect using CSS instead -->
+        <!-- <script type="text/javascript" src="button_transition.js"></script> -->
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -22,7 +27,7 @@
         <!-- Navigation menu at top of page -->
         <header>
             <a href="index.html" class="nav-logo">
-                <img src="images/Fleur-de-lis-2024-logo-reversed-BC.png" alt="Fleur-de-lis logo of Scouting America." />
+                <img src="images/logos/Fleur-de-lis-2024-logo-reversed-BC.png" alt="Fleur-de-lis logo of Scouting America." />
             </a>
 
             <nav>
@@ -55,8 +60,8 @@
         <section class="general-info">
             <div class="troop-info">
                 <p> 
-                    Since 1969, Troop 4054 B has been serving the youth of the Town of
-                    Ballston, NY. <br>We are chartered by American
+                    Since 1969, Troop 4054 B has been serving the youth of the Town of 
+                    Ballston, NY. <br><span class="mobile-break"><br></span>We are chartered by American
                     Legion Post #1817, and are a member of the Mohawk District
                     in the Twin Rivers Council.             
                  </p>
@@ -75,6 +80,7 @@
         <!-- Image Gallery -->
         <section class="gallery-wrap">
         <div class="gallery-container">
+
             <button onclick="scrollPhotos(-1)">&#10094;</button>
 
             <div class="slideshow-container" id="slideshowContainer">
@@ -123,8 +129,10 @@
                         <div class="caption"></div>
                     </div>
                 </div>
-            </div>            
+            </div>
+            
             <button onclick="scrollPhotos(1)">&#10095;</button>
+
         </div>
         </section>
 
@@ -147,10 +155,11 @@
                 </p>
                 <p><br></p>
                 <p>
-                    <a href="#" class="infoButton" id="openPopup">Get More Information</a>
+                    <a href="#" class="infoButton" id="openPopup">Get More Information</a> 
                 </p>
                 <p>
                     <a href="https://my.scouting.org/online-registration/56ab6000-4875-480e-be1e-2abfa06590a7/applicant-type" target="_blank" rel="noopener" class="applyButton">Apply Online Now</a>
+
                 </p>
             </div>
         </div>
@@ -205,7 +214,7 @@
                 </p>
                 <p><br></p>
                 <p>
-                   <a href="https://wreathsacrossamerica.org/pages/167300/Overview" target="_blank" rel="noopener" class="sponsorButton">Sponsor A Wreath</a>
+                    <a href="https://wreathsacrossamerica.org/pages/167300/Overview" target="_blank" rel="noopener" class="sponsorButton">Sponsor A Wreath</a>
                 </p>
             </div>
         </div>
@@ -214,13 +223,13 @@
         <footer>            
             <div class="footer-logos">                
                  <a href="https://www.facebook.com/profile.php?id=61561207439466" target="_blank" rel="noopener">
-                    <img src="images/facebook.png" alt="Facebook logo. White 'f' on blue circle.">
+                    <img src="images/logos/facebook.png" alt="Facebook logo. White 'f' on blue circle.">
                 </a>
                 <a href="https://www.scouting.org/" target="_blank" rel="noopener">
-                    <img src="images/Fleur-de-lis-2024-logo-4c-BC.png" alt="Red and blue fleur-de-lis.">
+                    <img src="images/logos/Fleur-de-lis-2024-logo-4c-BC.png" alt="Red and blue fleur-de-lis.">
                 </a>
                 <a href="https://trcscouting.org/" target="_blank" rel="noopener">
-                    <img src="images/twinrivers.jpg" alt="Logo of the Twin Rivers Council.">
+                    <img src="images/logos/twinrivers.jpg" alt="Logo of the Twin Rivers Council.">
                 </a>
             </div>
             <p class="footer-text"><a href="https://www.troop4054.org/cc-license">&copy; 2020-2025 Troop 4054. All rights reserved.</a></p>
