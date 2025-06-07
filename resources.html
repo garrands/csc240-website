@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
+    <!-- CSC-240 Web Programming, S. Garrand -->
+     
     <head>
         <title>Troop 4054 B</title>
 
         <link rel="stylesheet" type="text/css" href="styles.css"/>
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
-        <script type="text/javascript" src="contactform_script.js"></script>
         <script type="text/javascript" src="mobile_menu.js"></script>
-        <script type="text/javascript" src="hamburger.js"></script>
-        <script type="text/javascript" src="photo_gallery.js"></script>   
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -22,14 +21,14 @@
         <!-- Navigation menu at top of page -->
         <header>
             <a href="index.html" class="nav-logo">
-                <img src="images/Fleur-de-lis-2024-logo-reversed-BC.png" alt="Fleur-de-lis logo of Scouting America." />
+                <img src="images/logos/Fleur-de-lis-2024-logo-reversed-BC.png" alt="Fleur-de-lis logo of Scouting America." />
             </a>
 
             <nav>
                 <!-- Create hamburger menu for mobile -->
-                <!-- References
-                https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
-                https://piccalil.li/blog/build-a-fully-responsive-progressively-enhanced-burger-menu/ -->
+                 <!-- References -->
+                <!-- https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+                <!-- https://piccalil.li/blog/build-a-fully-responsive-progressively-enhanced-burger-menu/ -->
                 <div class="hamburger" id="burgerMenu">
                     <span></span>
                     <span></span>
@@ -52,22 +51,29 @@
         <!-- Main heading -->
         <h1 id="main"> Forms & Resources</h1>
       
-        <section class="resources-wrap">
-            <!-- Special event links -->
-            <hr class="solid2">
-            <h2 class="subhead_green2">2025 Summer Camp @ <a href="https://campwakpominee.org/" target="_blank" rel="noopener" class="match-heading">Camp Wakpominee</a></h2>
-            <ul class="resourcesList">
-                <li><a href="https://drive.google.com/file/d/1IDdU_IOY4HNR8H_zi3UAP-b3Wq8idvmz/view?usp=sharing" target="_blank" rel="noopener">Health Form - All parts must be filled out & copy of insurance card attached</a></li>
-                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScLUbrkHLo6ABVom8U3fl30Wbc2RxgMp8--eeKwUhRy1DcLxQ/viewform" target="_blank" rel="noopener">Food Allergy and Dietary Restrictions Form</a> (Submit no later than 13 Jul 2025)</li>
-                <li><a href="https://campwakpominee.org/wp-content/uploads/2025/04/Wakpominee-2025-v1-Draft-Merit-Badge-Schedule.pdf" target="_blank" rel="noopener">Merit Badge Schedule (Draft)</a></li>
-                <li><a href="https://campwakpominee.org/wp-content/uploads/2025/04/Merit-Badge-Prerequisite.pdf" target="_blank" rel="noopener">Merit Badge Prerequisites</a></li>
-                <li><a href="https://campwakpominee.org/wp-content/uploads/2025/05/804AO-1-Camper-Release-Form.pdf" target="_blank" rel="noopener">Camper Release Form</a></li>
-                <li><a href="https://forms.gle/ZZCkSv8Jm4m2WHFe6" target="_blank" rel="noopener">Campership Application</a> (Due 01 Apr 2025)</li>
-                <li><a href="https://campwakpominee.org/wp-content/uploads/2025/05/LeaderGuide24_300dpi250424.pdf" target="_blank" rel="noopener">Planning Guide for Leaders</a></li>
-                <li><a href="https://forms.gle/Z5seGq1uc5xJUAds9" target="_blank" rel="noopener">Adult Background Check Form</a> (Due by 26 June 2025)</li>                
-            </ul>
-            <hr class="solid2">
-        </section>
+        <div class="full-width-camp">
+            <section class="resources-wrap no-padding">
+                <hr class="solid2 full-line">
+
+                 <!-- Add a wrapper div here -->
+                <div class="resources-inner">
+                    <h2 class="subhead_green2">2025 Summer Camp @ 
+                        <a href="https://campwakpominee.org/" target="_blank" rel="noopener" class="match-heading">Camp Wakpominee</a>
+                    </h2>
+                    <ul class="resourcesList">
+                        <li><a href="https://drive.google.com/file/d/1IDdU_IOY4HNR8H_zi3UAP-b3Wq8idvmz/view?usp=sharing" target="_blank" rel="noopener">Health Form - All parts must be filled out & copy of insurance card attached</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScLUbrkHLo6ABVom8U3fl30Wbc2RxgMp8--eeKwUhRy1DcLxQ/viewform" target="_blank" rel="noopener">Food Allergy and Dietary Restrictions Form</a> (Submit no later than 13 Jul 2025)</li>
+                        <li><a href="https://campwakpominee.org/wp-content/uploads/2025/04/Wakpominee-2025-v1-Draft-Merit-Badge-Schedule.pdf" target="_blank" rel="noopener">Merit Badge Schedule (Draft)</a></li>
+                        <li><a href="https://campwakpominee.org/wp-content/uploads/2025/04/Merit-Badge-Prerequisite.pdf" target="_blank" rel="noopener">Merit Badge Prerequisites</a></li>
+                        <li><a href="https://campwakpominee.org/wp-content/uploads/2025/05/804AO-1-Camper-Release-Form.pdf" target="_blank" rel="noopener">Camper Release Form</a></li>
+                        <li><a href="https://forms.gle/ZZCkSv8Jm4m2WHFe6" target="_blank" rel="noopener">Campership Application</a> (Due 01 Apr 2025)</li>
+                        <li><a href="https://campwakpominee.org/wp-content/uploads/2025/05/LeaderGuide24_300dpi250424.pdf" target="_blank" rel="noopener">Planning Guide for Leaders</a></li>
+                        <li><a href="https://forms.gle/Z5seGq1uc5xJUAds9" target="_blank" rel="noopener">Adult Background Check Form</a> (Due by 26 June 2025)</li>                
+                    </ul>
+                </div>
+                <hr class="solid2 full-line">
+            </section>
+        </div>
 
         <div class="section-group">
             <!-- Links for parents -->
@@ -99,7 +105,11 @@
             </div>
             
         </div>
-        <hr class="solid2">
+
+        <div class="resources-wrap">
+            <hr class="solid2">
+        </div>
+
         <div class="section-group">
             <!-- Links for patrol leaders --> 
             <div class="section">
@@ -131,13 +141,13 @@
         <footer>            
             <div class="footer-logos">
                  <a href="https://www.facebook.com/profile.php?id=61561207439466" target="_blank" rel="noopener">
-                    <img src="images/facebook.png" alt="Facebook logo. White 'f' on blue circle.">
+                    <img src="images/logos/facebook.png" alt="Facebook logo. White 'f' on blue circle.">
                 </a>
                 <a href="https://www.scouting.org/" target="_blank" rel="noopener">
-                    <img src="images/Fleur-de-lis-2024-logo-4c-BC.png" alt="Red and blue fleur-de-lis.">
+                    <img src="images/logos/Fleur-de-lis-2024-logo-4c-BC.png" alt="Red and blue fleur-de-lis.">
                 </a>
                 <a href="https://trcscouting.org/" target="_blank" rel="noopener">
-                    <img src="images/twinrivers.jpg" alt="Logo of the Twin Rivers Council.">
+                    <img src="images/logos/twinrivers.jpg" alt="Logo of the Twin Rivers Council.">
                 </a>
             </div>
             <p class="footer-text"><a href="https://www.troop4054.org/cc-license">&copy; 2020-2025 Troop 4054. All rights reserved.</a></p>
