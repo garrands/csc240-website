@@ -1,20 +1,26 @@
-/* Scouting America Official Colors
-Primary Colors          Secondary Colors
-Blue: #003F87           Pale Blue: #9AB3D5
-Gold: #FDC116           Dark Blue: #003366
-Grey: #515354           Light Tan: #E9E9E4
-Olive: #243E2C          Dark Tan: #AD9D7B
-Red: #CE1126            Pale Grey: #858787
-Tan: #D6CEBD            Dark Grey: #232528 
-*/
+/****************************************** 
+CSC-240 Web Programming
+S. Garrand
 
-/* GLOBAL STYLING */
+Scouting America Official Colors  
+
+Primary Colors          Secondary Colors    
+Blue: #003F87           Pale Blue: #9AB3D5  
+Gold: #FDC116           Dark Blue: #003366  
+Grey: #515354           Light Tan: #E9E9E4  
+Olive: #243E2C          Dark Tan: #AD9D7B   
+Red: #CE1126            Pale Grey: #858787   
+Tan: #D6CEBD            Dark Grey: #232528    
+******************************************/
+/***************************************** 
+GLOBAL STYLING 
+*****************************************/
 * {
     margin: 0;
     padding: 0;
     font-family: Lato, Arial, Helvetica, Verdana, Geneva, sans-serif;
     font-size: 16px;
-    color: #242328;    
+    color: #242328;  
 }
 
 a:visited {
@@ -25,7 +31,9 @@ body a {
     text-decoration: underline;
 }
 
-/* LAYOUT STYLING */
+/***************************************** 
+LAYOUT STYLING 
+*****************************************/
 header {
     display: flex;
     justify-content: flex-start;
@@ -48,12 +56,6 @@ nav {
     
 }
 
-/* .nav-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}  */
-
 .nav-logo {
     display: flex;
     align-items: center;    
@@ -66,16 +68,6 @@ nav {
     width: auto;
     display: block;
 }
-
-/* .nav-title { */
-  /* color: #ffffff; */
-  /* font-size: 18px; */
-  /* font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  margin-right: 24px; */
-  /*white-space: nowrap; /* prevent wrapping */
-/* } */
 
 footer {
     background-color: #ffffff;
@@ -108,17 +100,7 @@ footer {
     vertical-align: middle;
 }
 
-/*.hero {
-    width: 100%;
-    max-height: 60vh; /* Limit height relative to viewport */
-    /* overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
-} */
-
-.hero {/*added*/
+.hero {
     width: 100%;
     max-height: 60vh; /* Limit height relative to viewport */
     overflow: hidden;
@@ -129,42 +111,36 @@ footer {
     padding-top: 50px;
 }
 
-
 .hero img {
     width: 100%;
-    height: auto;       /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
     object-fit: contain; 
-    max-height: 60vh;    /* Prevent image from getting too tall */
+    max-height: 60vh; /* Prevent image from getting too tall */
     display: block;
 }
 
-.column {
-    flex: 1; 
-    max-width: 50%;    
-}
-
-.row {
-    display:flex;
-    justify-content: center;
-    gap: 20px;
-    width:80%;
-    margin:auto;
-}
-
 .section-group {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .section {
-      flex: 1;
-      min-width: 300px;
+    /* For lining up the 4 columns of links*/
+    flex: 1;
+    min-width: 300px;
 }
 
-/* NAVIGATION STYLING */
+mobile-break {
+    display: none;
+}
 
+/***************************************** 
+NAVIGATION MENU STYLING 
+*****************************************/
 header li {
     list-style: none;
     display: inline-block;
@@ -235,23 +211,21 @@ nav li a:hover:not(.active) {
 }
 
 #burgerLinks {
-  list-style-type: none;
-  /* display: none; */
-  gap: 1px;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    gap: 1px;
+    margin: 0;
+    padding: 0;
 }
 
 #burgerLinks li a {
-  color: #ffffff;
-  text-decoration: none;
-  /* font-weight: 700; */
-  /* font-family: 'Lato', sans-serif; */
-  padding: 16px 8px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 8px;
 }
 
-/* TYPOGRAPHY STYLING */
-
+/***************************************** 
+TYPOGRAPHY STYLING 
+*****************************************/
 #main {
     /* Main header on each page */
     color: #243E2C;
@@ -304,7 +278,6 @@ nav li a:hover:not(.active) {
     padding-top: 16px;
 }
 
-
 .general-info .troop-info a:hover {
     /* Hover effect inside general-info troop-info */
     font-weight: bold;
@@ -312,18 +285,18 @@ nav li a:hover:not(.active) {
 }
 
 .img-text p,
-.troop-info p {/*added*/
+.troop-info p {
     font-size: 18px; 
     line-height: 1.2; 
 }
 
-.img-text p {/*added 6-3*/
+.img-text p {
     max-width: 550px;
 }
 
-
-/* COMPONENTS STYLING */
-
+/***************************************** 
+COMPONENTS STYLING 
+*****************************************/
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -334,29 +307,11 @@ button {
     border: none;
 }
 
-/* .infoButton, 
-.applyButton, 
-.sponsorButton {
-    border: none;
-    background-color: #243E2C;
-    padding: 10px 24px;
-    margin-top: 20px;
-    min-width: 50%;
-    max-width: 60%;
-    text-align: center;
-    display: inline-block;
-    font-size: 17px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border: none;
-}  */
-
 .infoButton, 
 .applyButton, 
-.sponsorButton {/*added*/
+.sponsorButton {
     display: inline-block;
-    width: 250px;          /* consistent width */
+    width: 250px; /* consistent width */
     max-width: 90%;
     text-align: center;
     padding: 12px 0;
@@ -367,7 +322,7 @@ button {
     text-decoration: none;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /*remove for JS to work*/
 }
 
 .infoButton:hover, 
@@ -376,29 +331,13 @@ button {
     background-color: #858787;
 }
 
-.applyButton:visited, /*added*/
+.applyButton:visited, 
 .sponsorButton:visited,
 .infoButton:visited {
-    color: #ffffff;         /* same as normal button text */
+    color: #ffffff;        
 }
-/* .img-container {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding: 2% 10%;
-} */
 
-/*.img-container { /*added*/
-    /*display: flex;
-    flex-direction: row;     /* side-by-side layout */
-    /*align-items: center;
-    justify-content: center;
-    text-align: left;
-    gap: 40px;
-    padding: 20px 5%;
-} */
-
-.img-container { /*added 6-3*/
+.img-container  { 
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -410,32 +349,21 @@ button {
     margin: 0 auto;
 }
 
-
-/* .img-main {
-    width: 470px;
-    height: 394px;
-    object-fit:contain;
-} */
-.img-main {/*added*/
+.img-main {
     width: 100%;
     height: auto;
     max-width: 470px; /* preserve quality on larger screens */
     object-fit: contain;
 } 
 
-/* .img-text {
-    padding-left: 20px;
-    padding-right: 50px;
-} */
-
-.img-text {/*added*/
+.img-text {
     max-width: 600px;
     width: 100%;
     padding: 0;
 }
 
 .img-container .image,
-.img-container .img-text {/*added*/
+.img-container .img-text {
     flex: 1;
     max-width: 50%;
 }
@@ -491,7 +419,6 @@ button {
     color: #ffffff;
     border: none;
     padding: 10px 20px;
-    /* border-radius: 5px; */
     cursor: pointer;
     font-size: 16px;
 }
@@ -524,7 +451,7 @@ ul.resourcesList {
     padding-left: 20px;
     font-size: 16px; 
     margin-left: 3em; 
-    margin-right: 3em; 
+    margin-right: 3em;     
 }
 
 ul.resourcesList li {
@@ -533,37 +460,33 @@ ul.resourcesList li {
     font-size: 16px;
 }
 
-/* PHOTO GALLERY STYLING */
-
+/***************************************** 
+PHOTO GALLERY STYLING 
+*****************************************/
 .gallery-wrap, 
 .resources-wrap {
     background-color: #E9E9E4;
 }
 
-/* .gallery-container {
+.resources-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.gallery-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 40px; 
     background-color:inherit;
-} */
-
-.gallery-container {/*added 6-3*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 40px 20px;
-    background-color: inherit;
-    max-width: 1200px;
-    margin: 0 auto;
 }
-
 
 .slideshow-container {
     width: 100%;
-    max-width: 2000px;
+    max-width: 1600px;
     overflow: hidden; /* hide scrollbar */
     white-space: nowrap;
     border: 2px solid #AD9D7B;
@@ -596,8 +519,9 @@ ul.resourcesList li {
     width: 100%;
 }
 
-/* CALENDAR PAGE STYLING */
-
+/***************************************** 
+CALENDAR STYLING 
+*****************************************/
 ul.calendarList {
     list-style-type: square;
     padding-left: 20px;
@@ -655,44 +579,35 @@ ul.resourcesList a:hover {
     margin-bottom: 5px;  
 }
 
-/* RESPONSIVE STYLING */
-
+/***************************************** 
+RESPONSIVE STYLING 
+*****************************************/
 @media (max-width: 768px) {
+    
     /* Calendar Section */
     .calendar-section {
         flex-direction: column;
         align-items: center;
         padding: 20px 5%;
-    }
-    /* .calendar-image {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-    } */
+    }    
     .calendar-image img {
         height: auto;
         width: 100%;
         max-width: 100%;
-    }
-    /* .calendar-lists {
-        width: 100%;
-        margin-top: 20px;
-    } */
-
+    }    
     .calendar-image,
-    .calendar-lists {/*added*/
-    width: 100%;
-    max-width: 100%;
+    .calendar-lists {
+        width: 100%;
+        max-width: 100%;
+    }
+    .calendar-lists {
+        margin-top: 20px;
     }
 
-    .calendar-lists {/*added*/
-    margin-top: 20px;
-    }
-
-    /* Responsive Navigation */
+    /* Navigation */
     .hamburger {
         display: flex;
-    }    
+    }   
     nav ul {
         flex-direction: column;
         display: none;
@@ -736,45 +651,18 @@ ul.resourcesList a:hover {
         text-decoration: none;
     }
 
-    /* Buttons */
-    /* .infoButton,
-    .applyButton,
-    .sponsorButton {
-        font-size: 14px;
-        padding: 8px 16px;
-        min-width: 80%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    } */
-
+    /* Components */
     .infoButton,
     .applyButton,
-    .sponsorButton {/*added*/
+    .sponsorButton {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-
-    /* Image and text */
-    /* .img-text {
-        padding-left: 10px;
-        padding-right: 10px;
-    } */
-    .img-text {/*added*/
+    .img-text {
        padding: 0;
     }
-
-    /* .img-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        
-    } */
-
-    .img-container {/*added*/
+    .img-container {
         flex-direction: column; /*stack on small screens */
         align-items: center;
         text-align: center;   
@@ -784,41 +672,29 @@ ul.resourcesList a:hover {
         max-width: 90vw;
         height: auto;
     }
-
     .img-container .image,
-    .img-container .img-text {/*added*/
-    max-width: 100%;
-    }
-
-.img-container .image, /*added 6-3*/
-.img-container .img-text {
-    flex: 1;
-    max-width: 50%;
-}
-
-
-    /* Rows and columns */
-    .row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .column {
+    .img-container .img-text {
         max-width: 100%;
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
     }
-    .column img {
-        width: 100%;
-        height: auto;
+    .img-container .image, 
+    .img-container .img-text {
+        flex: 1;
+        max-width: 50%;
     }
 
-    .subhead_red { /*added*/
-    text-align: center; /*center when on mobile only*/
+    /* Typography */
+    .subhead_red { 
+        text-align: center; /*center when on mobile only*/
+    }  
+    .troop-info p:first-of-type { 
+        text-align: left;
     }
 
-    .hero {/*added*/
-    padding-top: 60px;
+    /* Layout */
+    .hero {
+        padding-top: 60px;
     }
-
+    .mobile-break {
+        display: inline;
+    }
 }
